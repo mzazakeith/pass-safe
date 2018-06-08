@@ -2,9 +2,9 @@ import getpass
 
 def main_menu():
 
-    # '''
-    # Function that opens the main menu and allows access to the program
-    # '''
+    '''
+    Function that opens the main menu and allows access to the program
+    '''
 
     #ascii art text
     print('''
@@ -27,9 +27,9 @@ def main_menu():
 
 def login():
 
-    # '''
-    # Funcion that allows existing users to login
-    # '''
+    '''
+    Funcion that allows existing users to login
+    '''
 
     print("Enter your username")
     user = input("Username: ")
@@ -46,9 +46,9 @@ def login():
 
 def user_menu():
 
-    # '''
-    # Function that allows access to the user menu
-    # '''
+    '''
+    Function that allows access to the user menu
+    '''
 
     print("USER MENU \n Gain access to the apps features using the following shortcodes:" + " \n GP - If you want to generate a new custom password for a site \n VS - If you want to view already your already saved passwords \n AE - If you want to add on to the existing passwords \n CP - If you want to copy a password to your clipboard  \n X - If you want to go back to the main menu \n")
     short_code = input("Short code: ").lower()
@@ -71,9 +71,9 @@ def user_menu():
 
 def clean_file():
 
-    # '''
-    # Function that takes the file containing all created users and removes all blank lines and outputs it in as a clean file
-    # '''
+    '''
+    Function that takes the file containing all created users and removes all blank lines and outputs it in as a clean file
+    '''
 
     with open('created.txt', 'r') as infile, open('login.txt', 'w') as outfile:
      for line in infile:
@@ -87,9 +87,9 @@ class User:
     '''
     def create_user(self):
 
-        # '''
-        # Function that allows one to create new users
-        # '''
+        '''
+        Function that allows one to create new users
+        '''
 
         print("Enter the username that you would like to use \n")
         new_user  = input("Your Username: ")
@@ -108,9 +108,9 @@ class Credentials:
     '''
     def add_credentials(self):
 
-        # '''
-        # Function that allows the user to add credentials
-        # '''
+        '''
+        Function that allows the user to add credentials
+        '''
 
         print("Please re-enter your username to confirm this action")
         user = input("username: ")
@@ -131,9 +131,11 @@ class Credentials:
         return False
 
     def display_credentials(self):
-        # '''
-        # Functions that displays a users credentials
-        # '''
+
+        '''
+        Functions that displays a users credentials
+        '''
+
         print("Please re-enter your username to confirm this action")
         user = input("username: ")
         f = open("login.txt", "r")
@@ -145,17 +147,17 @@ class Credentials:
                 for line in af.readlines():
                     yourResult = line.strip().split("\n")
                     for word in yourResult:
+                        # return(word)
                         print(word)
-                        return(word)
                 return True
         print("wrong username")
         return False
 
     def generate_password(self):
 
-        # '''
-        # Function that generates new passwords for the user
-        # '''
+        '''
+        Function that generates new passwords for the user
+        '''
 
         import secrets
         import string
@@ -179,9 +181,11 @@ class Credentials:
         return False
 
     def copy_password(self):
-        # '''
-        # Function that copies passwords for a specific site to the clipboard
-        # '''
+        
+        '''
+        Function that copies passwords for a specific site to the clipboard
+        '''
+
         print("Please re-enter your username to confirm this action")
         user = input("username: ")
         f = open("login.txt", "r")
@@ -194,7 +198,6 @@ class Credentials:
                 for line in af.readlines():
                     yourResult = line.strip().split("\n")
                     for word in yourResult:
-                        print("Here are a list of credentials that can be copied")
                         print(word)
                 print("\n")
                 print("Enter website name for password to be copied")
@@ -213,3 +216,6 @@ class Credentials:
         return False
 
 creds = Credentials()
+
+
+# main_menu()
