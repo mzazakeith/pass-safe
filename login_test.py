@@ -19,7 +19,12 @@ class TestCredentials(unittest.TestCase):
 
     def test_display_credentials(self):
         creds = "facebook:123456"
-        self.assertEqual(creds,Credentials.display_credentials(self))    
+        self.assertEqual(creds,Credentials.display_credentials(self))
+
+    def test_copy_password(self):
+         copied = "123456"
+         import pyperclip
+         self.assertEqual(copied,Credentials.copy_password(self))
 
 
 
