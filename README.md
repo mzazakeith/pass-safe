@@ -22,13 +22,21 @@ Pass Safe lets you manage your login credentials using the CLI.Pass safe also al
  Open your terminal and run the following command:
 
 -   git clone <https://github.com/mzazakeith/pass-safe.git> && cd pass-safe
--   on terminal run the command ./run
+-   on terminal run the command ./run.py
 
 
-## Requirements
+## Requirements to run the program
 
 -   Python3.6
 -   Pyperclip
+
+For the program to run properly please create a file named created.txt and login.txt
+
+##Requirements for running tests
+To run the tests you have to have created the file created.txt and login.text
+In the both of files paste in the following text **user|passwd**
+Please use **user** as the username and **passwd** as the password
+For site in the test use facebook and 123456 as its password
 
 ## Known Bugs
 
