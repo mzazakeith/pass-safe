@@ -69,6 +69,17 @@ def user_menu():
         print("\n")
         user_menu()
 
+def clean_file():
+
+    '''
+    Function that takes the file containing all created users and removes all blank lines and outputs it in as a clean file
+    '''
+
+    with open('created.txt', 'r') as infile, open('login.txt', 'w') as outfile:
+     for line in infile:
+        if not line.strip(): continue
+        outfile.write(line)        
+
 
 class User:
     '''
