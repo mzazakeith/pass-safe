@@ -67,3 +67,30 @@ class Credentials:
                 return True
         print("wrong username")
         return False
+
+    def generate_password(self):
+
+        # '''
+        # Function that generates new passwords for the user
+        # '''
+
+        import secrets
+        import string
+        print("Re-enter your username to confirm action")
+        user = input("Username: ")
+        f = open("login.txt", "r")
+        for line in f.readlines():
+            us, pw = line.strip().split("|")
+            if (user in us):
+                print("Username Confirmed")
+                print("Enter the site which you will use the password")
+                site = input("Site: ")
+                print("Enter the length of password you want")
+                length = int(input("Length: "))
+                alphabet = string.ascii_letters + string.digits + string.punctuation
+                password = ''.join(secrets.choice(alphabet) for i in range(20))
+                with open(f"{user}", "a")as myfile:
+                    myfile.write(site + ": "+ password + "\n")
+                return True
+        print("Wrong username")
+        return False
