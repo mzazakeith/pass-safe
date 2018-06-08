@@ -94,3 +94,37 @@ class Credentials:
                 return True
         print("Wrong username")
         return False
+
+    def copy_password(self):
+        # '''
+        # Function that copies passwords for a specific site to the clipboard
+        # '''
+        print("Please re-enter your username to confirm this action")
+        user = input("username: ")
+        f = open("login.txt", "r")
+        for line in f.readlines():
+            us, pw = line.strip().split("|")
+            if (user in us):
+                print("Username Confirmed")
+                print("\n")
+                af = open(f"{user}", "r")
+                # for line in af.readlines():
+                #     yourResult = line.strip().split("\n")
+                #     for word in yourResult:
+                #         print("Here are a list of credentials that can be copied")
+                #         print(word)
+                print("\n")
+                print("Enter website name for password to be copied")
+                site = input("Site: ")
+                tf = open(f"{user}", "r")
+                for line in tf.readlines():
+                    sn, pw = line.strip().split(":")
+                    if (site in sn) :
+                        import pyperclip
+                        pw = pw.strip()
+                        pyperclip.copy(pw)
+                        print(f"Password for {site} has been copied to the clipboard")
+                        return(pw)
+                return True
+        print("wrong username")
+        return False
