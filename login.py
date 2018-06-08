@@ -46,3 +46,24 @@ class Credentials:
                 return True
         print("Wrong username")
         return False
+
+    def display_credentials(self):
+        # '''
+        # Functions that displays a users credentials
+        # '''
+        print("Please re-enter your username to confirm this action")
+        user = input("username: ")
+        f = open("login.txt", "r")
+        for line in f.readlines():
+            us, pw = line.strip().split("|")
+            if (user in us):
+                print("Username Confirmed")
+                af = open(f"{user}", "r")
+                for line in af.readlines():
+                    yourResult = line.strip().split("\n")
+                    for word in yourResult:
+                        print(word)
+                        return(word)
+                return True
+        print("wrong username")
+        return False
