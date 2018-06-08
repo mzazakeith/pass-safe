@@ -25,6 +25,24 @@ def main_menu():
         print("Short code used is not recognised")
         print("Try again")
 
+def login():
+
+    # '''
+    # Funcion that allows existing users to login
+    # '''
+
+    print("Enter your username")
+    user = input("Username: ")
+    password = getpass.getpass("Password: ")
+    f = open("login.txt", "r")
+    for line in f.readlines():
+        us, pw = line.strip().split("|")
+        if (user in us) and (password in pw):
+            print ("Login successful!")
+            user_menu()
+            return True
+    print ("Wrong username or password")
+    return False
 
 
 class User:
