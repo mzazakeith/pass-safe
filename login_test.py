@@ -10,5 +10,14 @@ class TestUser(unittest.TestCase):
         self.assertEqual(line,User.create_user(self))
 
 
+class TestCredentials(unittest.TestCase):
+    
+    def test_add_credentials(self):
+
+        cred = "facebook:123456"
+        self.assertEqual(cred,Credentials.add_credentials(self))
+
+
+
 if __name__ == '__main__':
     unittest.main()
