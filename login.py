@@ -16,7 +16,7 @@ class User:
             myfile.write("\n"+new_user + "|" + new_pass)
             return(new_user + "|" + new_pass)
 
-user = User()
+# user = User()
 
 
 class Credentials:
@@ -128,3 +128,5 @@ class Credentials:
                 return True
         print("wrong username")
         return False
+
+# creds = Credentials()
