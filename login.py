@@ -2,17 +2,17 @@
 
 def main_menu():
 
-    '''
-    Function that opens the main menu and allows access to the program
-    '''
+    # '''
+    # Function that opens the main menu and allows access to the program
+    # '''
 
     #ascii art text
- #    print('''
- # |  \/  |  / \  |_ _| \ | | |  \/  | ____| \ | | | | |
- # | |\/| | / _ \  | ||  \| | | |\/| |  _| |  \| | | | |
- # | |  | |/ ___ \ | || |\  | | |  | | |___| |\  | |_| |
- # |_|  |_/_/   \_|___|_| \_| |_|  |_|_____|_| \_|\___/
- #          ''')
+    print('''
+ |  \/  |  / \  |_ _| \ | | |  \/  | ____| \ | | | | |
+ | |\/| | / _ \  | ||  \| | | |\/| |  _| |  \| | | | |
+ | |  | |/ ___ \ | || |\  | | |  | | |___| |\  | |_| |
+ |_|  |_/_/   \_|___|_| \_| |_|  |_|_____|_| \_|\___/
+          ''')
     print("Gain access using the following shortcodes:" + " \n CU - If you want to create a new user \n LI - If you want to login to an existing account \n")
     short_code = input("Short code: ").lower()
     if short_code == "cu":
