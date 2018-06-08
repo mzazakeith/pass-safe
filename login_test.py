@@ -11,11 +11,16 @@ class TestUser(unittest.TestCase):
 
 
 class TestCredentials(unittest.TestCase):
-    
+
     def test_add_credentials(self):
 
         cred = "facebook:123456"
         self.assertEqual(cred,Credentials.add_credentials(self))
+
+    def test_display_credentials(self):
+        creds = "facebook:123456"
+        self.assertEqual(creds,Credentials.display_credentials(self))    
+
 
 
 
