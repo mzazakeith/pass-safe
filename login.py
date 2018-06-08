@@ -1,3 +1,32 @@
+# import getpass
+
+def main_menu():
+
+    '''
+    Function that opens the main menu and allows access to the program
+    '''
+
+    #ascii art text
+ #    print('''
+ # |  \/  |  / \  |_ _| \ | | |  \/  | ____| \ | | | | |
+ # | |\/| | / _ \  | ||  \| | | |\/| |  _| |  \| | | | |
+ # | |  | |/ ___ \ | || |\  | | |  | | |___| |\  | |_| |
+ # |_|  |_/_/   \_|___|_| \_| |_|  |_|_____|_| \_|\___/
+ #          ''')
+    print("Gain access using the following shortcodes:" + " \n CU - If you want to create a new user \n LI - If you want to login to an existing account \n")
+    short_code = input("Short code: ").lower()
+    if short_code == "cu":
+        user.create_user()
+        main_menu()
+    elif short_code == "li":
+        clean_file()
+        login()
+    else:
+        print("Short code used is not recognised")
+        print("Try again")
+
+
+
 class User:
     '''
     This is a class for the user
