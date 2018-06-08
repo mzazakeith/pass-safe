@@ -181,7 +181,7 @@ class Credentials:
         return False
 
     def copy_password(self):
-        
+
         '''
         Function that copies passwords for a specific site to the clipboard
         '''
@@ -218,4 +218,4 @@ class Credentials:
 creds = Credentials()
 
 
-# main_menu()
+main_menu()
