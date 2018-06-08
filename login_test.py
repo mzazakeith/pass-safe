@@ -8,3 +8,7 @@ class TestUser(unittest.TestCase):
 
         line = "user|passwd"
         self.assertEqual(line,User.create_user(self))
+
+
+if __name__ == '__main__':
+    unittest.main()
