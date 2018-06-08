@@ -108,11 +108,11 @@ class Credentials:
                 print("Username Confirmed")
                 print("\n")
                 af = open(f"{user}", "r")
-                # for line in af.readlines():
-                #     yourResult = line.strip().split("\n")
-                #     for word in yourResult:
-                #         print("Here are a list of credentials that can be copied")
-                #         print(word)
+                for line in af.readlines():
+                    yourResult = line.strip().split("\n")
+                    for word in yourResult:
+                        print("Here are a list of credentials that can be copied")
+                        print(word)
                 print("\n")
                 print("Enter website name for password to be copied")
                 site = input("Site: ")
