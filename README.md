@@ -32,7 +32,7 @@ Pass Safe lets you manage your login credentials using the CLI.Pass safe also al
 
 For the program to run properly please create a file named created.txt and login.txt
 
-##Requirements for running tests
+## Requirements for running tests
 To run the tests you have to have created the file created.txt and login.text
 In the both of files paste in the following text **user|passwd**
 Please use **user** as the username and **passwd** as the password
