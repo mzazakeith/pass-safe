@@ -44,6 +44,31 @@ def login():
     print ("Wrong username or password")
     return False
 
+def user_menu():
+
+    # '''
+    # Function that allows access to the user menu
+    # '''
+
+    print("USER MENU \n Gain access to the apps features using the following shortcodes:" + " \n GP - If you want to generate a new custom password for a site \n VS - If you want to view already your already saved passwords \n AE - If you want to add on to the existing passwords \n CP - If you want to copy a password to your clipboard  \n X - If you want to go back to the main menu \n")
+    short_code = input("Short code: ").lower()
+    if short_code == "gp":
+        creds.generate_password()
+    elif short_code == "vs":
+        creds.display_credentials()
+    elif short_code == "ae":
+        creds.add_credentials()
+    elif short_code == "cp":
+        creds.copy_password()
+    elif short_code == "x":
+        main_menu()
+    else:
+        print("\n")
+        print("Short code used is not recognised")
+        print("Try again")
+        print("\n")
+        user_menu()
+
 
 class User:
     '''
