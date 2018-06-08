@@ -88,7 +88,7 @@ class Credentials:
                 print("Enter the length of password you want")
                 length = int(input("Length: "))
                 alphabet = string.ascii_letters + string.digits + string.punctuation
-                password = ''.join(secrets.choice(alphabet) for i in range(20))
+                password = ''.join(secrets.choice(alphabet) for i in range(length))
                 with open(f"{user}", "a")as myfile:
                     myfile.write(site + ": "+ password + "\n")
                 return True
